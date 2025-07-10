@@ -244,4 +244,20 @@ This implementation follows [LangGraph best practices](https://langchain-ai.gith
 
 ---
 
+## 🌐 DeepWiki: Your Interactive Documentation Portal
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://app.devin.ai/wiki/donbr/langgraph_multiagent)
+
+**DeepWiki provides an AI-powered interface to explore this project in depth.** Ask questions, get instant answers, and discover:
+
+- 🏗️ **System Architecture**: Interactive diagrams showing how all components connect
+- 📊 **Performance Analysis**: Detailed benchmarks comparing all 6 retrieval strategies
+- 🔧 **Configuration Deep Dives**: Advanced settings and optimization techniques
+- 💡 **Implementation Insights**: Code explanations and design decisions
+- 🚀 **Scaling Strategies**: How to adapt this foundation for production use
+
+Perfect for when you need quick answers or want to explore specific technical aspects without diving through all the code.
+
+---
+
 **🎯 Ready to Start?** Open `multiagent_refactored.ipynb` and begin your journey into multi-agent AI systems!
