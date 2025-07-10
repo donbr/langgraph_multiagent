@@ -41,7 +41,7 @@ export LANGSMITH_API_KEY="your_key"
 jupyter lab
 
 # Run the refactored notebook
-jupyter execute multiagent_refactored.ipynb
+jupyter lab multiagent_refactored.ipynb
 ```
 
 ### Working with the Modular Code
@@ -143,7 +143,7 @@ DopenessEditor → reads document, adds engaging elements
 
 ### Model Configuration
 - Primary LLM: `gpt-4o-mini` for agents
-- RAG LLM: `gpt-4.1-nano` for faster retrieval responses  
+- RAG LLM: `gpt-4o-mini` for faster retrieval responses  
 - Embeddings: `text-embedding-3-small` for vector operations
 
 ### Known Issues and Deprecations
@@ -249,9 +249,9 @@ content/data/
 ```
 
 ### Git Management
-- `content/` is currently untracked in git (appears in git status)
-- Consider adding to `.gitignore` if production data should not be versioned
-- Alternatively, version control sample outputs for demonstration purposes
+- `content/` is automatically ignored by git (included in `.gitignore`)
+- Production data is not versioned to protect user privacy
+- Sample outputs are preserved in this repository for demonstration purposes
 
 ### Troubleshooting Workspace Issues
 - **Permission Errors**: Ensure write permissions to `./content/data/`

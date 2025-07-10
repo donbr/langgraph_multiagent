@@ -75,4 +75,4 @@ def get_llm(model: str = "gpt-4o-mini"):
 
 def get_nano_llm():
     """Get a nano version of the LLM for faster responses."""
-    return ChatOpenAI(model="gpt-4.1-nano")
+    return ChatOpenAI(model="gpt-4o-mini")
