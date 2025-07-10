@@ -1,5 +1,35 @@
 # Multi-Agent AI Systems: From Simple RAG to Team Coordination
 
+## TLDR - Quick Run
+
+**Just want to run the code?** Here's how:
+
+```bash
+# 1. Install dependencies (requires Python 3.11+)
+uv sync
+
+# 2. Set your API keys
+export OPENAI_API_KEY="your-openai-key"
+export TAVILY_API_KEY="your-tavily-key"
+export LANGSMITH_API_KEY="your-langsmith-key"  # Optional but recommended
+
+# 3. Run it!
+jupyter lab multiagent_refactored.ipynb
+# OR run the demo script
+python demo_refactored.py
+```
+
+**Get API Keys:**
+- [OpenAI](https://platform.openai.com/api-keys) (free tier works)
+- [Tavily](https://tavily.com/) (free tier works)  
+- [LangSmith](https://smith.langchain.com/) (optional - enables agent tracing)
+
+**Troubleshooting:** If `uv` command not found, install it first: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+
+---
+
+## About This Project
+
 > **Why This Matters**: Imagine having a team of AI assistants that can research, write, and edit documents together - just like human teams, but faster and more consistent. This project teaches you to build exactly that using LangGraph.
 
 ## What You'll Build
@@ -49,31 +79,6 @@ By the end of this journey, you'll create an AI system where:
 - Error handling and recovery
 
 **Success Check**: ✅ You can add a new agent type and integrate it into the workflow
-
-## Quick Start (5 minutes)
-
-### Prerequisites
-- Python 3.11+ installed
-- Basic familiarity with Jupyter notebooks
-- [OpenAI API key](https://platform.openai.com/api-keys) (free tier works)
-- [Tavily API key](https://tavily.com/) (free tier works)
-- [LangSmith API key](https://smith.langchain.com/) (optional but highly recommended)
-
-### Setup
-```bash
-# 1. Install dependencies
-uv sync
-
-# 2. Set your API keys
-export OPENAI_API_KEY="your-openai-key"
-export TAVILY_API_KEY="your-tavily-key"
-export LANGSMITH_API_KEY="your-langsmith-key"  # Optional: enables agent tracing
-
-# 3. Start learning!
-jupyter lab multiagent_refactored.ipynb
-```
-
-**⚠️ Stuck?** Check the [Troubleshooting](#troubleshooting) section below.
 
 ### 🔍 Why LangSmith? (Highly Recommended)
 
