@@ -16,6 +16,8 @@ The system operates through a three-tier architecture:
 2. **Specialized Teams**: Research team (web search + document retrieval) and Authoring team (document creation + editing)
 3. **Supervisor Orchestration**: Meta-supervisor coordinates between teams based on task requirements
 
+> 📊 **Visual Guide**: See the [interactive architecture diagram](https://app.devin.ai/wiki/donbr/langgraph_multiagent#architecture) for a complete visualization of the three-tier system and message flow.
+
 ### Key Architectural Patterns
 - **State Management**: Each graph type has its own TypedDict state (`State`, `ResearchTeamState`, `DocWritingState`, `SupervisorState`)
 - **Agent Composition**: Agents are created using factory functions with LLM + tools + system prompts
@@ -78,6 +80,8 @@ State flows unidirectionally through the system:
 2. **Team States** (`ResearchTeamState`, `DocWritingState`): Team-specific state management with member tracking
 3. **Base State** (`State`): Simple RAG operations with question/context/response
 
+> 🔄 **Visual Guide**: View the [state flow diagram](https://app.devin.ai/wiki/donbr/langgraph_multiagent#state-flow) to see how data moves between different graph states.
+
 ### Agent Creation Pattern
 All agents follow the same creation pattern:
 1. Create agent using `create_agent(llm, tools, system_prompt)`
@@ -107,6 +111,8 @@ CopyEditor → reads document, fixes grammar/tone
 DopenessEditor → reads document, adds engaging elements
 ```
 
+> 🤝 **Visual Guide**: See the [agent collaboration sequence diagram](https://app.devin.ai/wiki/donbr/langgraph_multiagent#collaboration) showing how agents work together through the shared workspace.
+
 **4. Production Quality Validation**
 - Example outputs demonstrate genuine multi-agent collaboration
 - Documents show evidence of each agent's specialization
@@ -132,6 +138,8 @@ DopenessEditor → reads document, adds engaging elements
 3. **Execute**: Team supervisor coordinates team members
 4. **Aggregate**: Results flow back to main supervisor
 5. **Output**: Final response or handoff to next team
+
+> 🎯 **Visual Guide**: Explore the [execution flow visualization](https://app.devin.ai/wiki/donbr/langgraph_multiagent#execution-flow) to see conditional routing and error handling in action.
 
 ## Key Configuration
 
@@ -257,3 +265,33 @@ content/data/
 - **Permission Errors**: Ensure write permissions to `./content/data/`
 - **Disk Space**: Monitor usage as each session creates new documents
 - **Path Resolution**: Working directory creation uses relative paths from execution location
+
+## Visual Documentation & Interactive Resources
+
+For a deeper understanding of this system through visual representations, explore the [DeepWiki documentation portal](https://app.devin.ai/wiki/donbr/langgraph_multiagent) which provides:
+
+### 🏗️ Architecture Diagrams
+- **[System Architecture](https://app.devin.ai/wiki/donbr/langgraph_multiagent#architecture)**: Interactive visualization of the three-tier architecture and component relationships
+- **[State Management](https://app.devin.ai/wiki/donbr/langgraph_multiagent#state-flow)**: Visual representation of state flow between different graph types
+- **[Tool Binding Matrix](https://app.devin.ai/wiki/donbr/langgraph_multiagent#tools)**: See which tools are available to which agents
+
+### 📊 Performance & Analysis
+- **[Performance Benchmarks](https://app.devin.ai/wiki/donbr/langgraph_multiagent#performance)**: Detailed analysis comparing retrieval strategies
+- **[Agent Invocation Patterns](https://app.devin.ai/wiki/donbr/langgraph_multiagent#patterns)**: Visualize how agents are called in different scenarios
+- **[Resource Utilization](https://app.devin.ai/wiki/donbr/langgraph_multiagent#resources)**: Understand system resource usage
+
+### 🔧 Implementation Details
+- **[Collaboration Workflows](https://app.devin.ai/wiki/donbr/langgraph_multiagent#collaboration)**: Sequence diagrams showing agent teamwork
+- **[Error Recovery Flows](https://app.devin.ai/wiki/donbr/langgraph_multiagent#error-handling)**: Visual guide to system resilience
+- **[LangSmith Trace Examples](https://app.devin.ai/wiki/donbr/langgraph_multiagent#traces)**: Real execution traces for debugging
+
+### 🚀 Quick Visual Reference
+
+| Concept | Visual Resource | Use Case |
+|---------|----------------|----------|
+| Agent Hierarchy | [Architecture Diagram](https://app.devin.ai/wiki/donbr/langgraph_multiagent#architecture) | Understanding system structure |
+| State Flow | [State Machine Diagram](https://app.devin.ai/wiki/donbr/langgraph_multiagent#state-flow) | Debugging state transitions |
+| Agent Collaboration | [Sequence Diagrams](https://app.devin.ai/wiki/donbr/langgraph_multiagent#collaboration) | Optimizing workflows |
+| Performance | [Benchmark Charts](https://app.devin.ai/wiki/donbr/langgraph_multiagent#performance) | System optimization |
+
+These visual resources complement the text documentation and provide interactive ways to explore the system's complexity.
