@@ -28,6 +28,29 @@ python demo_refactored.py
 
 ---
 
+## Documentation Guide
+
+This repository includes three main documentation files, each serving a specific purpose:
+
+📚 **README.md** (this file) - **Start Here!**
+- For learners and first-time users
+- Focuses on the learning journey and exercises
+- Contains setup instructions and troubleshooting
+
+🤖 **[CLAUDE.md](CLAUDE.md)** - **For AI-Assisted Development**
+- Guidance for developers using Claude Code (claude.ai/code)
+- Technical patterns and architectural decisions
+- Parsimony principle and development guidelines
+
+🏗️ **[src/README.md](src/README.md)** - **Technical Architecture Reference**
+- Detailed module documentation
+- Implementation patterns with citations
+- Authoritative source for code organization
+
+Choose the appropriate guide based on your needs. Cross-references between documents minimize duplication while maintaining clear separation of concerns.
+
+---
+
 ## About This Project
 
 > **Why This Matters**: Imagine having a team of AI assistants that can research, write, and edit documents together - just like human teams, but faster and more consistent. This project teaches you to build exactly that using LangGraph.

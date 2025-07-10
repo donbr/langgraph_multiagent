@@ -27,15 +27,12 @@ The system operates through a three-tier architecture:
 ## Common Development Commands
 
 ### Environment Setup
-```bash
-# Install dependencies (requires Python 3.11)
-uv sync
+For detailed environment setup instructions including dependency installation and API key configuration, see the [Quick Start section in README.md](README.md#tldr---quick-run).
 
-# Set required environment variables
-export OPENAI_API_KEY="your_key"
-export TAVILY_API_KEY="your_key" 
-export LANGSMITH_API_KEY="your_key"
-```
+Required environment variables:
+- `OPENAI_API_KEY` - Required for LLM operations
+- `TAVILY_API_KEY` - Required for web search functionality  
+- `LANGSMITH_API_KEY` - Optional but recommended for tracing
 
 ### Running the System
 ```bash
@@ -67,12 +64,12 @@ rag_graph = create_rag_graph(retriever, llm)
 ## Code Organization Principles
 
 ### Module Hierarchy
-- `src/agents/`: Agent creation functions, organized by team specialization
-- `src/graphs/`: Graph construction logic, each module handles one graph type
-- `src/tools/`: Tool implementations, grouped by functionality (search, retrieval, document manipulation)
-- `src/states/`: TypedDict definitions for type-safe state management
-- `src/nodes/`: Reusable node functions that work across different graphs
-- `src/utils/`: Configuration and utility functions for setup and data loading
+For a detailed breakdown of the source code organization and module structure, see [src/README.md](src/README.md#directory-structure). The modular architecture follows these key principles:
+
+- **Single Responsibility**: Each module has one clear purpose
+- **Team-based Organization**: Agents grouped by their team affiliation
+- **Type Safety**: TypedDict states for compile-time checking
+- **Reusability**: Shared components in dedicated modules
 
 ### State Flow Architecture
 State flows unidirectionally through the system:
@@ -144,10 +141,8 @@ DopenessEditor → reads document, adds engaging elements
 ## Key Configuration
 
 ### Environment Variables
-- `OPENAI_API_KEY`: Required for LLM operations
-- `TAVILY_API_KEY`: Required for web search functionality
-- `LANGSMITH_API_KEY`: Optional for tracing
-- `LANGSMITH_PROJECT`: Set to "langgraph_multiagent"
+See [Environment Setup](#environment-setup) above for required API keys. Additional configuration:
+- `LANGSMITH_PROJECT`: Set to "langgraph_multiagent" for organized tracing
 
 ### Model Configuration
 - Primary LLM: `gpt-4o-mini` for agents
@@ -206,9 +201,14 @@ The `content/data/` directory represents a **fundamental architectural component
 
 ## Notebook Usage Patterns
 
-The system supports both monolithic notebook usage (original) and modular development (refactored). The refactored approach imports clean functions from `src/` modules, while the original notebooks contain all logic inline.
+The system uses a modular approach where `multiagent_refactored.ipynb` demonstrates clean imports from the `src/` modules. This notebook showcases:
 
-For development, use `multiagent_refactored.ipynb` which demonstrates the modular architecture and cleaner separation of concerns.
+- How to import and use the modular components
+- Step-by-step construction of the multi-agent system
+- Clear separation between configuration and execution
+- Integration with the shared workspace pattern
+
+For development, use `multiagent_refactored.ipynb` as the reference implementation.
 
 ## Architecture Validation
 

@@ -1,5 +1,11 @@
 # Multi-Agent LangGraph System - Source Code
 
+**Purpose**: This is the technical architecture reference for the multi-agent LangGraph system. It provides detailed module documentation, implementation patterns, and serves as the authoritative source for code organization.
+
+**Other Documentation**:
+- 📚 [README.md](../README.md) - Start here for learning journey and setup instructions
+- 🤖 [CLAUDE.md](../CLAUDE.md) - For developers using Claude Code (claude.ai/code)
+
 This directory contains the refactored, modular implementation of the multi-agent LangGraph system. The code has been organized following LangGraph best practices and software engineering principles for maintainability, reusability, and type safety.
 
 ## References and Citations
